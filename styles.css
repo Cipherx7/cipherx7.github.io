@@ -1,178 +1,126 @@
 /* styles.css */
 
-/* Common Styles */
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #343a40;
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+}
+
 body {
-    font-family: 'Courier New', monospace;
-    color: #00ff00;
-    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
     transition: background-color 0.5s, color 0.5s;
 }
 
-nav {
-    background-color: #333;
-    padding: 10px;
+.dark-mode {
+    background-color: var(--background-color-dark) !important;
+    color: var(--text-color-dark) !important;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar-brand {
+    font-size: 1.5em;
 }
 
-nav li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #00ff00;
-    font-weight: bold;
+.navbar-toggler-icon {
+    background-color: var(--text-color-light);
 }
 
 section {
-    padding: 20px;
+    padding: 60px 0;
 }
 
-section h2 {
-    color: #00ff00;
+section#home {
+    background-color: var(--background-color-light);
 }
 
-.project {
-    border: 2px solid #00ff00;
-    padding: 10px;
+section#portfolio {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+}
+
+section#about {
+    background-color: var(--background-color-light);
+}
+
+section#contact {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+}
+
+.card {
+    margin-bottom: 30px;
+    background-color: var(--background-color-light);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+}
+
+.rounded-circle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
+.btn-primary {
+    background-color: var(--background-color-dark);
+    border-color: var(--background-color-dark);
 }
 
-.project h3 {
-    color: #00ff00;
+.btn-primary:hover {
+    background-color: #000000;
+    border-color: #000000;
 }
 
-footer {
-    background-color: #333;
-    color: #00ff00;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #1a1a1a;
-    color: #00ff00;
+.btn-primary:active {
+    background-color: #000000;
+    border-color: #000000;
 }
 
-.dark-mode nav {
-    background-color: #333;
+.btn-primary-dark-mode {
+    background-color: var(--background-color-light);
+    border-color: var(--background-color-light);
+    color: var(--text-color-dark);
 }
 
-.dark-mode nav a {
-    color: #00ff00;
-}
-
-.dark-mode section h2 {
-    color: #00ff00;
-}
-
-.dark-mode .project {
-    border: 2px solid #00ff00;
-}
-
-.dark-mode .project h3 {
-    color: #00ff00;
-}
-
-.dark-mode footer {
-    background-color: #333;
-    color: #00ff00;
-}
-
-/* White Theme */
-body {
+.btn-primary-dark-mode:hover {
     background-color: #ffffff;
-    color: #000000;
+    border-color: #ffffff;
+    color: var(--text-color-dark);
 }
 
-nav {
-    background-color: #f0f0f0;
+.btn-primary-dark-mode:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
 }
 
-nav a {
-    color: #000000;
-}
-
-.project {
-    border: 2px solid #000000;
-}
-
-.project h3 {
-    color: #000000;
-}
-
-footer {
-    background-color: #f0f0f0;
-    color: #000000;
-}
-
-.toggle-btn {
-    background-color: #f0f0f0;
-    color: #000000;
-}
-
-
-/* Add these styles to your existing styles.css */
-
-.toggle-btn {
-    background-color: #f0f0f0;
-    color: #000000;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999; /* Ensure it's above other elements */
-}
-
-.round-toggle {
+.btn-primary-dark-mode:active {
     background-color: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-color: #ffffff;
+    color: var(--text-color-dark);
 }
 
-.symbol {
-    font-size: 24px;
-    line-height: 1;
+/* Cursor Blinking Animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-/* styles.css */
-
-#cursor {
+.cursor {
     display: inline-block;
-    width: 5px;
-    height: 1em;
-    background-color: #00ff00;
-    margin-bottom: -4px;
-    vertical-align: middle;
-    visibility: visible; /* Initial visibility */
+    width: 1ch;
+    animation: blink 1s step-end infinite;
 }
-
-
-
