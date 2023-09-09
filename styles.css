@@ -1,5 +1,3 @@
-/* styles.css */
-
 :root {
     --background-color-light: #ffffff;
     --background-color-dark: #343a40;
@@ -35,18 +33,14 @@ section#home {
     background-color: var(--background-color-light);
 }
 
-section#portfolio {
+section#portfolio,
+section#contact {
     background-color: var(--background-color-dark);
     color: var(--text-color-light);
 }
 
 section#about {
     background-color: var(--background-color-light);
-}
-
-section#contact {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-light);
 }
 
 .card {
@@ -67,53 +61,34 @@ footer {
 
 .rounded-circle {
     display: block;
-    margin-left: 0;
-    margin-right: 0; /* Align to the right */
-    margin-bottom: 20px;
-    width: 250px; /* Adjust the width as needed */
+    margin: 0 auto 20px;
+    width: 250px;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary-dark-mode {
     background-color: var(--background-color-dark);
     border-color: var(--background-color-dark);
 }
 
-.btn-primary:hover {
-    background-color: #000000;
-    border-color: #000000;
-}
-
-.btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
-}
-
-.btn-primary:active {
+.btn-primary:hover,
+.btn-primary-dark-mode:hover,
+.btn-primary:focus,
+.btn-primary-dark-mode:focus {
     background-color: #000000;
     border-color: #000000;
 }
 
 .btn-primary-dark-mode {
-    background-color: var(--background-color-light);
-    border-color: var(--background-color-light);
     color: var(--text-color-dark);
 }
 
-.btn-primary-dark-mode:hover {
-    background-color: #ffffff;
-    border-color: #ffffff;
-    color: var(--text-color-dark);
-}
-
+.btn-primary-dark-mode:hover,
 .btn-primary-dark-mode:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
-}
-
-.btn-primary-dark-mode:active {
     background-color: #ffffff;
     border-color: #ffffff;
     color: var(--text-color-dark);
 }
-
 
 /* Cursor Blinking Animation */
 @keyframes blink {
@@ -126,61 +101,33 @@ footer {
     width: 1ch;
     animation: blink 0.2s step-end infinite;
 }
+
 .me {
-  display: block;
-  margin: 2em auto;
-  margin-bottom: 3em;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
+    display: block;
+    margin: 2em auto;
+    margin-bottom: 3em;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.social-icons a i {
+    margin: .3em;
+    cursor: pointer;
+    transition: color 300ms ease, margin-top 300ms ease;
+    transform: translateZ(0);
 }
 
-i {
-  margin: .3em;
-  cursor: pointer;
-  transition: color 300ms ease, margin-top 300ms ease;
-  transform: translateZ(0);
+.social-icons a i:hover {
+    margin-top: -1px;
 }
 
-i:hover {
-  margin-top: -1px;
-}
-
-#twitter:hover {
-  color: #77DDF6;
-}
-
-#github:hover {
-  color: black;
-}
-
-#linkedin:hover {
-  color: #0177B5;
-}
-
-#code:hover {
-  color: #29A329;
-}
-
-#stack:hover {
-  color: #ED780E;
-}
-
-#plus:hover {
-  color: #D43402;
-}
-
-#mail:hover {
-  color: #F7B401;
-}
-
-
-
-
+#twitter:hover { color: #77DDF6; }
+#github:hover { color: black; }
+#linkedin:hover { color: #0177B5; }
+#code:hover { color: #29A329; }
+#stack:hover { color: #ED780E; }
+#plus:hover { color: #D43402; }
+#mail:hover { color: #F7B401; }
