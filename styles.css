@@ -67,7 +67,7 @@ footer {
 
 .rounded-circle {
     display: block;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 0; /* Align to the right */
     margin-bottom: 20px;
     width: 250px; /* Adjust the width as needed */
