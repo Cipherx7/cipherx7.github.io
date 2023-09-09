@@ -5,69 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Pawar - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-      <script src="script.js"></script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Abhishek Pawar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home">
-        <h1>Hello, I'm <span id="typing"></span>
-        <div id="cursor"></div></h1>
-
-<div id="cursor"></div>
-
-        <p>Welcome to my portfolio website.</p>
+    <section id="home" class="text-center">
+        <div class="container">
+            <img src="https://github.com/Artificial-dev/Artificial-dev.github.io/blob/main/67840255.jpg" class="rounded-circle" alt="Your Photo" width="150">
+            <h1>Hello, I'm <span id="typing"></span></h1>
+            <p>Welcome to my portfolio website.</p>
+            <button class="btn btn-primary" onclick="toggleTheme()">Toggle Theme</button>
+        </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <!-- Add your projects here -->
-        <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Project description goes here.</p>
+    <section id="portfolio" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Portfolio</h2>
+            <div class="row">
+                <!-- Add your projects here using Bootstrap cards or custom HTML/CSS -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">Project description goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
         </div>
-
-        <!-- Add more projects as needed -->
     </section>
 
     <!-- About Me Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief bio about Abhishek Pawar here.</p>
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <p>Write a brief bio about Abhishek Pawar here.</p>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at abhishek@example.com</p>
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <p>Feel free to reach out to me at abhishek@example.com</p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="text-center">
         &copy; 2023 Abhishek Pawar
     </footer>
 
-    <!-- Toggle Button -->
-    <button class="toggle-btn" onclick="toggleTheme()">
-        <div class="round-toggle">
-            <div class="symbol">&#9732;</div>
-        </div>
-    </button>
-
-
+    <!-- Bootstrap JS and jQuery (for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
