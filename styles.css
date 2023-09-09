@@ -1,0 +1,178 @@
+/* styles.css */
+
+/* Common Styles */
+body {
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    margin: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00ff00;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    color: #00ff00;
+}
+
+.project {
+    border: 2px solid #00ff00;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project h3 {
+    color: #00ff00;
+}
+
+footer {
+    background-color: #333;
+    color: #00ff00;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #00ff00;
+}
+
+.dark-mode nav {
+    background-color: #333;
+}
+
+.dark-mode nav a {
+    color: #00ff00;
+}
+
+.dark-mode section h2 {
+    color: #00ff00;
+}
+
+.dark-mode .project {
+    border: 2px solid #00ff00;
+}
+
+.dark-mode .project h3 {
+    color: #00ff00;
+}
+
+.dark-mode footer {
+    background-color: #333;
+    color: #00ff00;
+}
+
+/* White Theme */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+nav {
+    background-color: #f0f0f0;
+}
+
+nav a {
+    color: #000000;
+}
+
+.project {
+    border: 2px solid #000000;
+}
+
+.project h3 {
+    color: #000000;
+}
+
+footer {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.toggle-btn {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+
+/* Add these styles to your existing styles.css */
+
+.toggle-btn {
+    background-color: #f0f0f0;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Ensure it's above other elements */
+}
+
+.round-toggle {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol {
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* styles.css */
+
+#cursor {
+    display: inline-block;
+    width: 5px;
+    height: 1em;
+    background-color: #00ff00;
+    margin-bottom: -4px;
+    vertical-align: middle;
+    visibility: visible; /* Initial visibility */
+}
+
+
+
