@@ -1,139 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Pawar - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-Gn5384G6J5JGSZGjGTJksbm6EGAsRb7qQpgEuKh8xRkUpU1i0Vg6SmfF7uws5ZYn" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script src="script.js"></script>
+  <title>Abhishek Pawar</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Abhishek Pawar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <button class="btn btn-primary" onclick="toggleTheme()">Toggle Theme</button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-<!-- Home Section -->
-<section id="home" class="text-center">
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-md-6 order-2 order-md-1">
-                <img src="wp532135-yagami-light-wallpaper.jpg" class="rounded-circle float-md-right" alt="Your Photo" width="250">
-            </div>
-            <div class="col-md-6 order-1 order-md-2 text-md-left"> <!-- Added class `text-md-left` -->
-                
-                
-           //     <h1>Hello, I'm <span id="typing"></span></h1>
-
-
-<h1>
-  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
-    <span class="wrap"></span>
-  </a>
-</h1>
-
-
-
-
-
-                
-                <p>Welcome to my portfolio website.</p>
-             
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Abhishek Pawar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
     </div>
-</section>
+  </nav>
 
+  <!-- Home Section -->
+  <section id="home" class="jumbotron text-center">
+    <div class="container">
+      <h1 class="display-4">Hello, I'm <span class="text-primary">Abhishek Pawar</span></h1>
+      <p class="lead">Script Kiddie & Programmer</p>
+    </div>
+  </section>
 
-
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-light">
-        <div class="container">
-            <h2 class="text-center">Portfolio</h2>
-            <div class="row">
-                <!-- Add your projects here using Bootstrap cards or custom HTML/CSS -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Project description goes here.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more projects as needed -->
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="img/project1.jpg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Project 1 description</p>
             </div>
+          </div>
         </div>
-    </section>
+        <!-- More projects -->
+      </div>
+    </div>
+  </section>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="text-center">About Me</h2>
-            <p>Write a brief bio about Abhishek Pawar here.</p>
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About Me</h2>
+      <p class="lead">About me paragraph</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+          <a href="#"><i class="fab fa-twitter fa-2x mr-3"></i></a>
+          <a href="#"><i class="fab fa-github fa-2x mr-3"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x mr-3"></i></a>
+
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light">
-    //    <div class="container">
-            <h2 class="text-center">Contact</h2>
-          <div class="me">
-  <img src="wp532135-yagami-light-wallpaper.jpg" alt="Your Profile Picture">
-</div>
-
-
-<div class="social-icons">
-  <a href="#" id="twitter"><i class="fab fa-twitter"></i></a>
-  <a href="#" id="github"><i class="fab fa-github"></i></a>
-  <a href="#" id="linkedin"><i class="fab fa-linkedin"></i></a>
-  <a href="#" id="code"><i class="fas fa-code"></i></a>
-  <a href="#" id="stack"><i class="fab fa-stack-overflow"></i></a>
-  <a href="#" id="plus"><i class="fas fa-plus"></i></a>
-  <a href="#" id="mail"><i class="far fa-envelope"></i></a>
-</div>
-
-//</div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        &copy; 2023 Abhishek Pawar
-    </footer>
-
-    <!-- Bootstrap JS and jQuery (for Bootstrap components) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
