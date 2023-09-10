@@ -1,13 +1,13 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
   var textElement = document.getElementById('typedText');
-  var textToType = 'Abhishek Pawar';
+  var textToType = 'Abhishek Pawar...';
   var speed = 100; // Typing speed in milliseconds
 
   function typeText(index) {
     if (index < textToType.length) {
       textElement.innerHTML += textToType.charAt(index);
-      index++;
+        index++;
       setTimeout(function() {
         typeText(index);
       }, speed);
@@ -15,4 +15,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   typeText(0);
-});
+  });
