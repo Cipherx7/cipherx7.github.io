@@ -1,133 +1,23 @@
-:root {
-    --background-color-light: #ffffff;
-    --background-color-dark: #343a40;
-    --text-color-light: #000000;
-    --text-color-dark: #ffffff;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color-light);
-    color: var(--text-color-light);
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.dark-mode {
-    background-color: var(--background-color-dark) !important;
-    color: var(--text-color-dark) !important;
-}
-
-.navbar-brand {
-    font-size: 1.5em;
-}
-
-.navbar-toggler-icon {
-    background-color: var(--text-color-light);
-}
-
-section {
-    padding: 60px 0;
-}
-
-section#home {
-    background-color: var(--background-color-light);
-}
-
-section#portfolio,
-section#contact {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-light);
-}
-
-section#about {
-    background-color: var(--background-color-light);
-}
-
-.card {
-    margin-bottom: 30px;
-    background-color: var(--background-color-light);
-}
-
-.card img {
-    height: 200px;
-    object-fit: cover;
-}
-
-footer {
-    padding: 20px 0;
-    background-color: var(--background-color-dark);
-    color: var(--text-color-light);
-}
-
-.rounded-circle {
-    display: block;
-    margin: 0 auto 20px;
-    width: 250px;
-}
-
-.btn-primary,
-.btn-primary-dark-mode {
-    background-color: var(--background-color-dark);
-    border-color: var(--background-color-dark);
-}
-
-.btn-primary:hover,
-.btn-primary-dark-mode:hover,
-.btn-primary:focus,
-.btn-primary-dark-mode:focus {
-    background-color: #000000;
-    border-color: #000000;
-}
-
-.btn-primary-dark-mode {
-    color: var(--text-color-dark);
-}
-
-.btn-primary-dark-mode:hover,
-.btn-primary-dark-mode:focus {
-    background-color: #ffffff;
-    border-color: #ffffff;
-    color: var(--text-color-dark);
-}
-
-/* Cursor Blinking Animation */
+/* styles.css */
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 90; }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .cursor {
-    display: inline-block;
-    width: 1ch;
-    animation: blink 0.2s step-end infinite;
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px; /* Increase the width to make it bigger */
+  height: 30px; /* Increase the height to make it bigger */
+  background-color: black;
+  animation: blink 1s infinite;
+}
+/* Add this to your styles.css file */
+#home {
+  padding-top: 70px; /* Adjust the value to your preference */
 }
 
-.me {
-    display: block;
-    margin: 2em auto;
-    margin-bottom: 3em;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-}
-
-.social-icons a i {
-    margin: .3em;
-    cursor: pointer;
-    transition: color 300ms ease, margin-top 300ms ease;
-    transform: translateZ(0);
-}
-
-.social-icons a i:hover {
-    margin-top: -1px;
-}
-
-#twitter:hover { color: #77DDF6; }
-#github:hover { color: black; }
-#linkedin:hover { color: #0177B5; }
-#code:hover { color: #29A329; }
-#stack:hover { color: #ED780E; }
-#plus:hover { color: #D43402; }
-#mail:hover { color: #F7B401; }
