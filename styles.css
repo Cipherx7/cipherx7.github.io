@@ -11,13 +11,39 @@
 .cursor {
   display: inline-block;
   vertical-align: middle;
-  width: 4px; /* Increase the width to make it bigger */
-  height: 30px; /* Increase the height to make it bigger */
+  width: 1px; /* Increase the width to make it bigger */
+  height: 40px; /* Increase the height to make it bigger */
   background-color: black;
   animation: blink 1s infinite;
 }
 /* Add this to your styles.css file */
 #home {
   padding-top: 70px; /* Adjust the value to your preference */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0px 0px 0px;
+  margin-bottom:0px;
 }
 
+.navbar {
+  background: transparent;
+  backdrop-filter: blur(3px);
+  background-color: #00000014;
+}
+.d-block
+{
+  width:36px;
+  height:36px;
+  border-radius: 100px;
+}
+
+
+
+.image-profile img{
+  padding-top:40px;
+  width: 35%;
+  height:35%;
+  filter: drop-shadow(13px 0px 5px rgb(190, 186, 186));
+ 
+}
