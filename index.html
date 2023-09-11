@@ -1,153 +1,159 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Abhishek Pawar</title>
-  
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-+pCjnJtob2hJmZ2aJJ2TPcZl2XRJd7VwPaA/mblab/CXK8+D5JSxOMykAkkHFrsM" crossorigin="anonymous">
-  
-  <script src="script.js"></script>
-  
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Abhishek Pawar</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-+pCjnJtob2hJmZ2aJJ2TPcZl2XRJd7VwPaA/mblab/CXK8+D5JSxOMykAkkHFrsM" crossorigin="anonymous">
+    
+    <script src="script.js"></script>
+    
 
-  
+    
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
 
-<body>
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg fixed-top">
-  <svg class="d-block"</svg>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#projects">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </div>
+  <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <!-- Add a container to hold the content of the navbar -->
+    <div class="container">
+
+        <!-- Add a logo or brand (if needed) -->
+        <a class="navbar-brand" href="#"></a>
+
+        <!-- Add a toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav justify-content-end"> <!-- Adjusted ml-auto to align right -->
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- Close the container -->
 </nav>
-  
+    
 
-<!-- Home Section -->
-<section id="home" class="jumbotron text-center">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6 order-md-2">
-        <div class="image-profile">
-          <img src="https://i.ibb.co/ZTPd070/Handsomeboy.png" alt="Right Image">
-        </div>
-      </div>
-      <div class="col-md-6 order-md-1">
-        <h1 class="display-4">Hello, I'm <span class="text-primary" id="typedText"></span><span class="cursor"></span></h1>
-        <p class="lead">Script Kiddie & Programmer</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-<!-- Projects Section -->
-<section id="projects" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Projects</h2>
-    <div class="row">
-      <div class="col-md-8 mb-4"> <!-- Adjusted class to make it wider -->
-
-        <!-- Carousel Container -->
-        <div id="projectCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <!-- First Card -->
-                <div class="col-md-6">
-                  <div class="repo-card" data-repo="Artificial-dev/picoCTF-Writups"></div>
-                </div>
-                <!-- Second Card -->
-                <div class="col-md-6">
-                  <div class="repo-card" data-repo="Artificial-dev/chat-pdf"></div>
-                   <!-- Third Card -->
-                  <div class="col-md-6">
-                  <div class="repo-card" data-repo="Artificial-dev/Artificial-dev.github.io"></div>
-                </div>
-              </div>
-            </div>
-            <!-- Add more carousel items as needed -->
+  <!-- Home Section -->
+  <section id="home" class="jumbotron text-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-2">
+          <div class="image-profile">
+            <img src="https://i.ibb.co/ZTPd070/Handsomeboy.png" alt="Right Image">
           </div>
-
-          <!-- Carousel Controls -->
-          <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
-
+        <div class="col-md-6 order-md-1">
+          <h1 class="display-4">Hello, I'm <span class="text-primary" id="typedText"></span><span class="cursor"></span></h1>
+          <p class="lead">Script Kiddie & Programmer</p>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- About Section -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4">About Me</h2>
-      <p class="lead">
-        I'm a passionate learner and a technology enthusiast. With a keen interest in cybersecurity and web development, I'm constantly exploring new technologies and honing my skills to tackle real-world challenges.
-      </p>
-      <p>
-        When I'm not coding or digging into cybersecurity topics, you can find me enjoying a good book or out in nature exploring hiking trails.
-      </p>
     </div>
   </section>
 
-  
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contact</h2>
-    <div class="row">
-      <div class="col-md-6 mx-auto text-center">
-        <a href="https://twitter.com" class="custom-icon twitter"></a>
-        <a href="https://github.com" class="custom-icon github"></a>
-        <a href="https://linkedin.com" class="custom-icon linkedin"></a>
+
+
+
+
+
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row">
+        <div class="col-md-8 mb-4"> <!-- Adjusted class to make it wider -->
+
+          <!-- Carousel Container -->
+          <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <!-- First Card -->
+                  <div class="col-md-6">
+                    <div class="repo-card" data-repo="Artificial-dev/picoCTF-Writups"></div>
+                  </div>
+                  <!-- Second Card -->
+                  <div class="col-md-6">
+                    <div class="repo-card" data-repo="Artificial-dev/chat-pdf"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more carousel items as needed -->
+            </div>
+
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-   <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="mb-4">About Me</h2>
+        <p class="lead">
+          I'm a passionate learner and a technology enthusiast. With a keen interest in cybersecurity and web development, I'm constantly exploring new technologies and honing my skills to tackle real-world challenges.
+        </p>
+        <p>
+          When I'm not coding or digging into cybersecurity topics, you can find me enjoying a good book or out in nature exploring hiking trails.
+        </p>
+      </div>
+    </section>
+
+    
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+          <a href="https://twitter.com" class="custom-icon twitter"></a>
+          <a href="https://github.com" class="custom-icon github"></a>
+          <a href="https://linkedin.com" class="custom-icon linkedin"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  </html>
