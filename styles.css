@@ -134,3 +134,17 @@ body {
 .custom-icon.linkedin {
   background-image: url('path_to_your_custom_icons/linkedin.png'); /* Provide the path to your LinkedIn icon */
 }
+/* Social Icon Styles */
+.custom-icon {
+  display: inline-block;
+  margin: 10px; /* Adjust the spacing between icons */
+  font-size: 32px; /* Adjust the icon size as needed */
+  transition: color 0.3s; /* Add a smooth transition for the color change */
+  color: #000; /* Set the default icon color */
+}
+
+/* Hover Animation */
+.custom-icon:hover {
+  color: #007bff; /* Change the color on hover (adjust to your preferred color) */
+}
+
