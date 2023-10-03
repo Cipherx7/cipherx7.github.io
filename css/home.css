@@ -1,1 +1,52 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+}
+#about p {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px; /* Increase the width to make it bigger */
+  height: 40px; /* Increase the height to make it bigger */
+  background-color: black;
+  animation: blink 1s infinite;
+}
+/* Add this to your styles.css file */
+#home.jumbotron{
+ 
+  padding-bottom: 0px;
+ 
+  margin-bottom:0px;
+}
+.image-profile img {
+
+  width: 50%; /* Adjust the width as needed */
+  max-width: 300px; /* Set a maximum width if desired */
+  filter: drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.345)); /* Add a drop shadow */
+  margin: 0 auto; /* Center the image horizontally */
+  padding-top: 30px;
+}
 
