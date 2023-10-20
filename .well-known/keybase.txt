@@ -1,14 +1,15 @@
-### Keybase proof
+==================================================================
+https://keybase.io/cipherx7
+--------------------------------------------------------------------
 
 I hereby claim:
 
-  * I am cipherx7 on github.
+  * I am an admin of https://cipherx7.github.io
   * I am cipherx7 (https://keybase.io/cipherx7) on keybase.
   * I have a public key ASCuJJKDbBiiDGzLSnhKQ7DBZ4VcfrZmcQKhh4KOSDF3eAo
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
-```json
 {
   "body": {
     "key": {
@@ -19,15 +20,15 @@ To claim this, I am signing this object:
       "username": "cipherx7"
     },
     "merkle_root": {
-      "ctime": 1697780264,
-      "hash": "d301a76d1877e6b820da5fd5d157cd78e5e37d06d90af1456de2f2f0667273e8b4b6c9d44a5e82237583c4dc3a7207e054dd8ef04bcc97fe81e962dcff69e2bc",
-      "hash_meta": "6013528d05a445664c123478f1b4e7a92d23053e19b4039e57b98ef98d90f489",
-      "seqno": 25053751
+      "ctime": 1697786582,
+      "hash": "fcc4b461876751b8a89f20c5f07e07c207de6af332f3b6ffde7dffc3ba36e60f2297245cf747d52930358ffc549ee0fb13680eeff7a2165a49c886c1366d724b",
+      "hash_meta": "827aa521bc3757c02cf78568a9ffb68c02c968d781ab3180a7cd3f3755e2b35b",
+      "seqno": 25053959
     },
     "service": {
-      "entropy": "a26J61QoJFpN/amlqhEBwmZE",
-      "name": "github",
-      "username": "cipherx7"
+      "entropy": "In2IbGmAlwKxha6PhaNmsewv",
+      "hostname": "cipherx7.github.io",
+      "protocol": "https:"
     },
     "type": "web_service_binding",
     "version": 2
@@ -36,32 +37,20 @@ To claim this, I am signing this object:
     "name": "keybase.io go client",
     "version": "6.2.3"
   },
-  "ctime": 1697780274,
+  "ctime": 1697786612,
   "expire_in": 504576000,
-  "prev": "f64cd5ba213d1085b7603b111f35010238e4e739388b59d3aac4fe6ef06bf62f",
-  "seqno": 10,
+  "prev": "749a364055bfe5b320f729ce9fa96b111361d43a8ae15adcfd8105a8b2ca2912",
+  "seqno": 18,
   "tag": "signature"
 }
-```
 
-with the key [ASCuJJKDbBiiDGzLSnhKQ7DBZ4VcfrZmcQKhh4KOSDF3eAo](https://keybase.io/cipherx7), yielding the signature:
+which yields the signature:
 
-```
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgriSSg2wYogxsy0p4SkOwwWeFXH62ZnECoYeCjkgxd3gKp3BheWxvYWTESpcCCsQg9kzVuiE9EIW3YDsRHzUBAjjk5zk4i1nTqsT+bvBr9i/EICsLQJmQpJV4/LjXhdxgxqakASBzYpZyMMYEK1y2NSDZAgHCo3NpZ8RA2hNCJJ9ClWJ0moAhOM5pnXZ9gp2mLJwx9dtuFLztjZmjy5ZHwz6q5TNSA2a4wXJKLJ/tb64hhJo1k/diUcpXCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDCBghg6f1W88nEaYHxHx7FDVGqxQiCGJ74h4j35OHQVo3RhZ80CAqd2ZXJzaW9uAQ==
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgriSSg2wYogxsy0p4SkOwwWeFXH62ZnECoYeCjkgxd3gKp3BheWxvYWTESpcCEsQgdJo2QFW/5bMg9ynOn6lrERNh1DqK4Vrc/YEFqLLKKRLEIJPiWlnb8e54uI48OzqcX8afZDpPmr5yXE6h1cWnSpRQAgHCo3NpZ8RAYhaaxh8fTNJK1Cr0MNA7xfRi3PgfemdEUdRpUkpVeU8K2VPnKjOMxWLDQq0nH+obt15s5bgE+8I8ORNd939ADKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICy7oD7f5ayOhZAhd8tCQaFI16TDawezuLASomH6kRf1o3RhZ80CAqd2ZXJzaW9uAQ==
 
-```
+And finally, I am proving ownership of this host by posting or
+appending to this document.
 
-And finally, I am proving ownership of the github account by posting this as a gist.
+View my publicly-auditable identity here: https://keybase.io/cipherx7
 
-### My publicly-auditable identity:
-
-https://keybase.io/cipherx7
-
-### From the command line:
-
-Consider the [keybase command line program](https://keybase.io/download).
-
-```bash
-# look me up
-keybase id cipherx7
-```
+==================================================================
