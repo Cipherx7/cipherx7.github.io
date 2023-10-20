@@ -1,0 +1,67 @@
+### Keybase proof
+
+I hereby claim:
+
+  * I am cipherx7 on github.
+  * I am cipherx7 (https://keybase.io/cipherx7) on keybase.
+  * I have a public key ASCuJJKDbBiiDGzLSnhKQ7DBZ4VcfrZmcQKhh4KOSDF3eAo
+
+To claim this, I am signing this object:
+
+```json
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010164c23d0de07212959e51b6b2c639812600618563bb8e63440de49f200fdac9760a",
+      "host": "keybase.io",
+      "kid": "0120ae2492836c18a20c6ccb4a784a43b0c167855c7eb6667102a187828e483177780a",
+      "uid": "fbcfc57cb7017ade8c78d2aac048df19",
+      "username": "cipherx7"
+    },
+    "merkle_root": {
+      "ctime": 1697780264,
+      "hash": "d301a76d1877e6b820da5fd5d157cd78e5e37d06d90af1456de2f2f0667273e8b4b6c9d44a5e82237583c4dc3a7207e054dd8ef04bcc97fe81e962dcff69e2bc",
+      "hash_meta": "6013528d05a445664c123478f1b4e7a92d23053e19b4039e57b98ef98d90f489",
+      "seqno": 25053751
+    },
+    "service": {
+      "entropy": "a26J61QoJFpN/amlqhEBwmZE",
+      "name": "github",
+      "username": "cipherx7"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.3"
+  },
+  "ctime": 1697780274,
+  "expire_in": 504576000,
+  "prev": "f64cd5ba213d1085b7603b111f35010238e4e739388b59d3aac4fe6ef06bf62f",
+  "seqno": 10,
+  "tag": "signature"
+}
+```
+
+with the key [ASCuJJKDbBiiDGzLSnhKQ7DBZ4VcfrZmcQKhh4KOSDF3eAo](https://keybase.io/cipherx7), yielding the signature:
+
+```
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgriSSg2wYogxsy0p4SkOwwWeFXH62ZnECoYeCjkgxd3gKp3BheWxvYWTESpcCCsQg9kzVuiE9EIW3YDsRHzUBAjjk5zk4i1nTqsT+bvBr9i/EICsLQJmQpJV4/LjXhdxgxqakASBzYpZyMMYEK1y2NSDZAgHCo3NpZ8RA2hNCJJ9ClWJ0moAhOM5pnXZ9gp2mLJwx9dtuFLztjZmjy5ZHwz6q5TNSA2a4wXJKLJ/tb64hhJo1k/diUcpXCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDCBghg6f1W88nEaYHxHx7FDVGqxQiCGJ74h4j35OHQVo3RhZ80CAqd2ZXJzaW9uAQ==
+
+```
+
+And finally, I am proving ownership of the github account by posting this as a gist.
+
+### My publicly-auditable identity:
+
+https://keybase.io/cipherx7
+
+### From the command line:
+
+Consider the [keybase command line program](https://keybase.io/download).
+
+```bash
+# look me up
+keybase id cipherx7
+```
