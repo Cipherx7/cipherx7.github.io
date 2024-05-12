@@ -1,0 +1,28 @@
+
+
+Name : Abhishek Pawar
+Roll no.: 41
+SE CSD
+# Practical No. 2
+
+
+
+
+1)list1=[1,2,3,4,5]
+list2=[6,7,8,9,10]
+set1=set(list1)
+set2=set(list2)
+print(set1.union(set2))
+
+OUTPUT:{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+2)list1=(input("enter elements:"))
+list2=(input("enter elements:"))
+set1=set(list1)
+set2=set(list2)
+print("union of the two set")
+print(set1.union(set2))
+OUTPUT:
+enter elements: t y u
+enter elements: v a t
+union of the two set: {'y', 'a', 't', 'u', ' ', 'v'}

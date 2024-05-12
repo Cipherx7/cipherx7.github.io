@@ -1,0 +1,30 @@
+Name : Abhishek Pawar
+Roll no.: 41
+SE CSD
+# Practical No. 11
+
+class Sphere:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def diameter(self):
+        return 2 * self.radius
+
+    def circumference(self):
+        return 2 * 3.14159 * self.radius
+
+    def volume(self):
+        return (4/3) * 3.14159 * (self.radius ** 3)
+
+radius = float(input("Enter the radius of the sphere: "))
+my_sphere = Sphere(radius)
+print("Diameter of the sphere:", my_sphere.diameter())
+print("Circumference of the sphere:", my_sphere.circumference())
+print("Volume of the sphere:", my_sphere.volume())
+
+
+OUTPUT
+Enter the radius of the sphere: 5
+Diameter of the sphere: 10.0
+Circumference of the sphere: 31.4159
+Volume of the sphere: 523.5983333333332

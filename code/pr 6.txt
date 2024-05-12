@@ -1,0 +1,28 @@
+
+Name : Abhishek Pawar
+Roll no.: 41
+SE CSD
+# Practical No. 6
+
+1)
+   string=input("Enter Stirng :")
+   sub_str=input("Enter word :")
+   if(string.find(sub_str)==-1):
+   print("Substring NOT Found in String! ")
+   else:
+   print("Substring in string! ")
+Output :-
+  Enter Stirng : Hello World
+  Enter word : World
+ Substring in string!
+2)
+   string=input("Enter string :")
+   sub_str=input("Enter word :")
+   if sub_str in string :
+   print("Substring is present in String")
+   else:  
+  print("Substring is NOT present in string ")
+Output :-
+  Enter string : Hello world welcome
+  Enter word : welcome
+ Substring is present in String
