@@ -46,11 +46,11 @@
         <input type="range" id="rate" min="500" max="5000" value="1000" class="slider" oninput="calculatePrice()">
     </div>
     <div class="slider-container">
-        <label for="x">Our Profit (X): ₹<span id="xValue">50</span></label><br>
+        <label for="x">Your Profit (X): ₹<span id="xValue">50</span></label><br>
         <input type="range" id="x" min="0" max="500" value="50" class="slider" oninput="calculatePrice()">
     </div>
     <div class="slider-container">
-        <label for="y">Hotel Owner's Profit (Y): ₹<span id="yValue">50</span></label><br>
+        <label id="yLabel" for="y">Hotel Owner's Profit (Y): ₹<span id="hourlyOwnerProfit">0</span> =< ₹<span id="totalOwnerProfit">0</span></label><br>
         <input type="range" id="y" min="0" max="500" value="50" class="slider" oninput="calculatePrice()">
     </div>
     <h2>Calculated Hourly Price: ₹<span id="hourlyPrice">0</span></h2>
@@ -68,10 +68,17 @@
             // Display the values
             document.getElementById('rateValue').textContent = rate;
             document.getElementById('xValue').textContent = x;
-            document.getElementById('yValue').textContent = y;
+
+            // Calculate rate / 24
+            const hourlyOwnerProfit = (rate / 24).toFixed(2);
+            document.getElementById('hourlyOwnerProfit').textContent = hourlyOwnerProfit;
+
+            // Calculate total owner's profit
+            const totalOwnerProfit = parseFloat(hourlyOwnerProfit) + y;
+            document.getElementById('totalOwnerProfit').textContent = totalOwnerProfit.toFixed(2);
 
             // Calculate hourly price
-            const hourlyPrice = (rate / 24) + x + y;
+            const hourlyPrice = parseFloat(hourlyOwnerProfit) + x + y;
 
             // Display calculated hourly price
             document.getElementById('hourlyPrice').textContent = hourlyPrice.toFixed(2);
@@ -80,7 +87,7 @@
             document.getElementById('exampleCalculation').textContent = 
                 `Using the formula: P = (R / 24) + X + Y
                 = (${rate} / 24) + ${x} + ${y}
-                = ₹${(rate / 24).toFixed(2)} + ₹${x} + ₹${y} = ₹${hourlyPrice.toFixed(2)}`;
+                = ₹${hourlyOwnerProfit} + ₹${x} + ₹${y} = ₹${hourlyPrice.toFixed(2)}`;
         }
 
         // Initial calculation
