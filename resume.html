@@ -40,6 +40,15 @@
     </style>
 </head>
 <body>
+      <h2>Calculated Hourly Price: ₹<span id="hourlyPrice">0</span></h2>
+        <p id="modeText"></p>
+    </div>
+
+    <!-- Example Calculation Display -->
+    <p><strong>Example Calculation:</strong></p>
+    <p id="exampleCalculation"></p>
+
+    
     <h1>Hourly Room Rate Calculator</h1>
     <div class="slider-container">
         <label for="rate">Hotel 24-hour Rate (R): ₹<span id="rateValue">1000</span></label><br>
@@ -59,13 +68,7 @@
         
     </div>
     <div>
-        <h2>Calculated Hourly Price: ₹<span id="hourlyPrice">0</span></h2>
-        <p id="modeText"></p>
-    </div>
 
-    <!-- Example Calculation Display -->
-    <p><strong>Example Calculation:</strong></p>
-    <p id="exampleCalculation"></p>
 
     <script>
         function calculatePrice() {
