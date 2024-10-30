@@ -50,10 +50,18 @@
         <input type="range" id="x" min="0" max="500" value="50" class="slider" oninput="calculatePrice()">
     </div>
     <div class="slider-container">
-        <label id="yLabel" for="y">Hotel Owner's Profit (Y): ₹<span id="hourlyOwnerProfit">0</span> =< ₹<span id="totalOwnerProfit">0</span></label><br>
+        <label id="yLabel" for="y">Hotel Owner's Profit (Y): ₹<span id="hourlyOwnerProfit">0</span> = ₹<span id="totalOwnerProfit">0</span></label><br>
         <input type="range" id="y" min="0" max="500" value="50" class="slider" oninput="calculatePrice()">
     </div>
-    <h2>Calculated Hourly Price: ₹<span id="hourlyPrice">0</span></h2>
+    <div class="slider-container">
+        <label for="hours">Select Number of Hours:</label><br>
+        <input type="range" id="hours" min="1" max="48" value="1" class="slider" oninput="calculatePrice()">
+        <p id="selectedHours">Hours: <span id="hoursValue">1</span></p>
+    </div>
+    <div>
+        <h2>Calculated Hourly Price: ₹<span id="hourlyPrice">0</span></h2>
+        <p id="modeText"></p>
+    </div>
 
     <!-- Example Calculation Display -->
     <p><strong>Example Calculation:</strong></p>
@@ -64,10 +72,12 @@
             const rate = parseFloat(document.getElementById('rate').value);
             const x = parseFloat(document.getElementById('x').value);
             const y = parseFloat(document.getElementById('y').value);
+            const hours = parseFloat(document.getElementById('hours').value);
 
             // Display the values
             document.getElementById('rateValue').textContent = rate;
             document.getElementById('xValue').textContent = x;
+            document.getElementById('hoursValue').textContent = hours;
 
             // Calculate rate / 24
             const hourlyOwnerProfit = (rate / 24).toFixed(2);
@@ -88,6 +98,15 @@
                 `Using the formula: P = (R / 24) + X + Y
                 = (${rate} / 24) + ${x} + ${y}
                 = ₹${hourlyOwnerProfit} + ₹${x} + ₹${y} = ₹${hourlyPrice.toFixed(2)}`;
+
+            // Determine mode: hourly or 24-hour
+            const totalHourlyCost = hourlyPrice * hours;
+
+            if (totalHourlyCost < rate) {
+                document.getElementById('modeText').textContent = "Mode: Hourly Format";
+            } else {
+                document.getElementById('modeText').textContent = "Mode: 24-Hour Format";
+            }
         }
 
         // Initial calculation
