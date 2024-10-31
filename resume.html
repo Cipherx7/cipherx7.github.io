@@ -40,19 +40,7 @@
     </style>
 </head>
 <body>
- <h1>Hourly Room Rate Calculator</h1>
-    <br>
-    
-      <h2>Calculated Hourly Price: ₹<span id="hourlyPrice">0</span></h2>
-        <p id="modeText"></p>
-    </div>
-
-    <!-- Example Calculation Display -->
-    <p><strong>Example Calculation:</strong></p>
-    <p id="exampleCalculation"></p>
-
-    <br>
-   
+    <h1>Hourly Room Rate Calculator</h1>
     <div class="slider-container">
         <label for="rate">Hotel 24-hour Rate (R): ₹<span id="rateValue">1000</span></label><br>
         <input type="range" id="rate" min="500" max="5000" value="1000" class="slider" oninput="calculatePrice()">
@@ -65,25 +53,24 @@
         <label id="yLabel" for="y">Hotel Owner's Profit (Y): ₹<span id="hourlyOwnerProfit">0</span> =< ₹<span id="totalOwnerProfit">0</span></label><br>
         <input type="range" id="y" min="0" max="500" value="50" class="slider" oninput="calculatePrice()">
     </div>
-    <div class="slider-container">
-        <label for="hours" id="selectedHours">Select Number of Hours: <span id="hoursValue">1</span></label><br>
-        <input type="range" id="hours" min="1" max="48" value="1" class="slider" oninput="calculatePrice()">
-        
-    </div>
     <div>
+        <h2>Calculated Hourly Price: ₹<span id="hourlyPrice">0</span></h2>
+        <p id="modeText"></p>
+    </div>
 
+    <!-- Example Calculation Display -->
+    <p><strong>Example Calculation:</strong></p>
+    <p id="exampleCalculation"></p>
 
     <script>
         function calculatePrice() {
             const rate = parseFloat(document.getElementById('rate').value);
             const x = parseFloat(document.getElementById('x').value);
             const y = parseFloat(document.getElementById('y').value);
-            const hours = parseFloat(document.getElementById('hours').value);
 
             // Display the values
             document.getElementById('rateValue').textContent = rate;
             document.getElementById('xValue').textContent = x;
-            document.getElementById('hoursValue').textContent = hours;
 
             // Calculate rate / 24
             const hourlyOwnerProfit = (rate / 24).toFixed(2);
@@ -105,13 +92,20 @@
                 = (${rate} / 24) + ${x} + ${y}
                 = ₹${hourlyOwnerProfit} + ₹${x} + ₹${y} = ₹${hourlyPrice.toFixed(2)}`;
 
-            // Determine mode: hourly or 24-hour
-            const totalHourlyCost = hourlyPrice * hours;
+            // Determine maximum hours for "Hourly Format" mode
+            let maxHours = 0;
+            let totalHourlyCost = 0;
 
-            if (totalHourlyCost < rate) {
-                document.getElementById('modeText').textContent = "Mode: Hourly Format";
+            // Increment hours until hourly cost meets or exceeds the 24-hour rate
+            while (totalHourlyCost < rate) {
+                maxHours++;
+                totalHourlyCost = hourlyPrice * maxHours;
+            }
+
+            if (maxHours === 1) {
+                document.getElementById('modeText').textContent = `Mode: Hourly Format is best up to 1 hour.`;
             } else {
-                document.getElementById('modeText').textContent = "Mode: 24-Hour Format";
+                document.getElementById('modeText').textContent = `Mode: Hourly Format is best up to ${maxHours - 1} hours.`;
             }
         }
 
