@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Injection Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #161616;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fffffff7;
+      box-shadow: 0 4px 10px rgb(0, 0, 0);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .header {
+      background: #000000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .login-form {
+      padding: 30px;
+    }
+
+    .login-form label {
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #4a181800;
+      border-radius: 5px;
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background: #444343;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background: #151515;
+    }
+
+    .logs-container {
+      background: #080808;
+      color: #feffa9;
+      font-family: monospace;
+      padding: 30px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .logs-container p {
+      margin: 0;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Sql Injection Emulator</h2>
+      <p>We almost never get hacked.</p>
+    </div>
+    <div class="login-form">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password">
+      <button onclick="attemptLogin()">Log in</button>
+    </div>
+    <div class="logs-container" id="logs">
+      <p>Application initialized. Waiting for user action...</p>
+    </div>
+  </div>
+
+  <script>
+    const logsContainer = document.getElementById('logs');
+
+    function logMessage(message) {
+      const p = document.createElement('p');
+      p.textContent = message;
+      logsContainer.appendChild(p);
+      logsContainer.scrollTop = logsContainer.scrollHeight; // Auto-scroll to latest log
+    }
+
+    function attemptLogin() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        logMessage('User attempted login with incomplete credentials.');
+        return;
+      }
+
+      logMessage(`User is attempting to login...`);
+      const simulatedQuery = `SELECT * FROM users WHERE email = '${username}' AND password = '${password}';`;
+      logMessage(simulatedQuery);
+
+      // Simulate SQL Injection only for password
+      if (password.includes("' OR '1'='1")) {
+        logMessage('Login successful. SQL injection attack bypassed authentication!');
+      } 
+      // Check for valid credentials
+      else if (username === 'test@email.com' && password === 'password') {
+        logMessage('Login successful. Welcome, user!');
+      } 
+      // For invalid credentials
+      else {
+        logMessage('Credentials did not match. Login failed.');
+      }
+    }
+  </script>
+</body>
+</html>
