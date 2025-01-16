@@ -89,7 +89,7 @@
       <input type="text" id="username" placeholder="Enter your username">
       <label for="password">Password</label>
       <input type="text" id="password" placeholder="Enter your password">
-      <button onclick="attemptLogin()">Log in</button>
+      <button id="loginBtn">Log in</button>
     </div>
     <div class="logs-container" id="logs">
       <p>Application initialized. Waiting for user action...</p>
@@ -116,8 +116,17 @@
       }
 
       logMessage(`User is attempting to login...`);
-      const simulatedQuery = `SELECT * FROM users WHERE email = '${username}' AND password = '${password}';`;
-      logMessage(simulatedQuery);
+
+      // Simulate the SQL query
+      let simulatedQuery = `SELECT * FROM users WHERE email = '${username}' AND password = '${password}';`;
+
+      // Check for invalid SQL syntax by checking if the password has extra quotes or characters
+      if (password.includes("'")) {
+        logMessage('Invalid SQL: ' + simulatedQuery);
+        return;  // Don't check credentials if SQL syntax is invalid
+      } else {
+        logMessage(simulatedQuery);
+      }
 
       // Simulate SQL Injection only for password
       if (password.includes("' OR '1'='1")) {
@@ -132,6 +141,9 @@
         logMessage('Credentials did not match. Login failed.');
       }
     }
+
+    // Attach event listener to the login button
+    document.getElementById('loginBtn').addEventListener('click', attemptLogin);
   </script>
 </body>
 </html>
