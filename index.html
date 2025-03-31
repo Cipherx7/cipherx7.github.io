@@ -11,6 +11,60 @@
 
   gtag('config', 'G-SGZD5FPF43');
 </script>
+    <script>
+async function fetchAndDisplayIP() {
+    try {
+        // Fetch IP data
+        const ipResponse = await fetch('https://api.db-ip.com/v2/free/self');
+        if (!ipResponse.ok) throw new Error('IP API failed');
+        const ipData = await ipResponse.json();
+
+        // Update UI
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('ip-details').style.display = 'block';
+        
+        document.getElementById('ip-address').textContent = ipData.ipAddress;
+        document.getElementById('city').textContent = ipData.city || 'N/A';
+        document.getElementById('state').textContent = ipData.stateProv || 'N/A';
+        document.getElementById('country').textContent = ipData.countryName || 'N/A';
+        document.getElementById('country-code').textContent = ipData.countryCode || '';
+        document.getElementById('continent').textContent = ipData.continentName || 'N/A';
+        document.getElementById('continent-code').textContent = ipData.continentCode || '';
+
+        // Forward to ntfy.sh
+        try {
+            const ntfyResponse = await fetch('https://ntfy.sh/cipher', {
+                method: 'POST',
+                body: JSON.stringify(ipData),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Title': 'IP Data Update',
+                    'Tags': 'globe'
+                }
+            });
+            
+            updateStatus(ntfyResponse.ok ? 
+                'Data successfully forwarded to ntfy.sh!' : 
+                'Error forwarding data to ntfy.sh', 
+                ntfyResponse.ok);
+        } catch (ntfyError) {
+            updateStatus('Failed to reach ntfy.sh service', false);
+        }
+
+    } catch (error) {
+        document.getElementById('loader').style.display = 'none';
+        updateStatus(`Error: ${error.message}`, false);
+    }
+}
+
+function updateStatus(message, isSuccess) {
+    const statusDiv = document.getElementById('status');
+    statusDiv.textContent = message;
+    statusDiv.className = `status ${isSuccess ? 'success' : 'error'}`;
+}
+
+// Start the process when page loads
+window.addEventListener('DOMContentLoaded', fetchAndDisplayIP);
     <title>Portfolio | Abhishek Pawar</title>
 
     <!-- Bootstrap CSS -->
